@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo a{
+            float: left;
+            display: block;
+            height: 50px;
+            width: 30px;
+            border-radius: 10px;
+            text-align: center;
+            background: green;
+            color: gainsboro;
+            text-decoration: none;
+            margin-right: 5px;
+            font: bold 20px/50px Arial;
+        }
+        /*存在id属性的元素  a[]{}*/
+        a[id]{
+            background: yellow;
+        }
+        /*属性名 标签名[属性名=属性值]{}*/
+        a[id=first]{
+            background: yellow;
+        }
+        /* 选中标签中class属性包含links的元素
+        *=代表包含关系 */
+        a[class*="links"]{
+            background: red;
+        }
+        /*选中href中以https开头的元素
+        ^=代表以xx开头
+        */
+        a[href^="https"]{
+            background: blue;
+        }
+        /*选中href中以com结尾的元素
+        $=代表以xx结尾
+        */
+        a[href$=pdf]{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<p class="demo">
+    <a href="https://baidu.com" class="links item first" id="first">1</a>
+    <a href="https://blog.kuangstudy.com" class="links item first" target="_blank" title="test">2</a>
+    <a href="css/12312.html" class="links item">3</a>
+    <a href="css/dsa.png" class="links item">4</a>
+    <a href="aaa.jpg">5</a>
+    <a href="/a.doc">6</a>
+    <a href="aaaa.pdf">7</a>
+    <a href="bbb.xlsx">8</a>
+    <a href="abc.bmp">9</a>
+    <a href="ipad.pptx">10</a>
+</p>
+
+
+</body>
+</html>
